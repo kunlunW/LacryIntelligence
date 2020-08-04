@@ -26,4 +26,6 @@ And to abtain the new position, we can basically multiply the current position (
 Once we have rotated all four corners of the bounding box this way, we need to find the 2 farthest rotated points along the the x-axis (this will correspond to the new width of the new bounding box) and the y-axis (this will correspond to the new height of the bounding box): 
 <img width="425" alt="Screen Shot 2020-08-04 at 9 17 39 AM" src="https://user-images.githubusercontent.com/52982585/89304901-9fbf1e00-d633-11ea-8a8e-a0b80342891e.png"> <br/>
 
+The old bounding box is in blue, the new rotated bounding box is in red. The new bounding box whose dimensions we need for YOLO is shown in black.<br/>
 
+We need to recalculate the height and width of the rotatd box this way because YOLO only takes in bounding boxes parallel to the x-y axis.
