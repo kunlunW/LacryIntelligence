@@ -2,7 +2,7 @@ Reference:
 https://usmanr149.github.io/urmlblog/yolo/2020/03/05/rotate_yolo_bbox.html <br/>
 
 
-**How to run the code:** <br/>
+# **How to run the code:** <br/>
 1. Go to your terminal/command prompt 
 2. Activate the environment containing the proper packages of opencv2, numpy, and argparse
 3. locate the current working directory 
@@ -19,4 +19,10 @@ where the W is the width of the image and the H is the height of the image. And 
 **Rotation matrix** <br/>
 If we want to rotate a point by (x,y) counterclockwise by a certain angle *theta*, then we can apply the below rotation matrix: 
 <img width="204" alt="Screen Shot 2020-08-04 at 9 12 53 AM" src="https://user-images.githubusercontent.com/52982585/89304148-ba44c780-d632-11ea-9e56-5051f0cd0104.png"> <br/>
-And to abtain the new position, we can basically multiply the current position (x,y) by the rotation matrix
+And to abtain the new position, we can basically multiply the current position (x,y) by the rotation matrix: 
+<img width="368" alt="Screen Shot 2020-08-04 at 9 14 32 AM" src="https://user-images.githubusercontent.com/52982585/89304561-30e1c500-d633-11ea-8258-f5b52220cdbe.png"> <br/> 
+
+**Determine eew width and new hieght** 
+Once we have rotated all four corners of the bounding box this way, we need to find the 2 farthest rotated points along the the x-axis (this will correspond to the new width of the new bounding box) and the y-axis (this will correspond to the new height of the bounding box): 
+
+
