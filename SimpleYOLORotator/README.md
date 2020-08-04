@@ -29,3 +29,16 @@ Once we have rotated all four corners of the bounding box this way, we need to f
 The old bounding box is in blue, the new rotated bounding box is in red. The new bounding box whose dimensions we need for YOLO is shown in black.<br/>
 
 We need to recalculate the height and width of the rotatd box this way because YOLO only takes in bounding boxes parallel to the x-y axis.
+
+# **Code explanation** <br/> 
+## `class yoloRotatebbox:` <br/>
+initialize name of the image, its extension and the angle you want to rotate <br/>
+
+## `def rotate_image(self):` <br/>
+Rotating the image easy using cv2. <br/>
+
+## `def rotateYolobbox(self):` <br/>
+Once we have the image name and the rotated image dimension, we can read in the .txt file that has the bounding box information from Yolo_mark and rotate the bounding the box. <br/>
+
+
+
