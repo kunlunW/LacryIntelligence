@@ -6,7 +6,7 @@ https://usmanr149.github.io/urmlblog/yolo/2020/03/05/rotate_yolo_bbox.html <br/>
 1. Go to your terminal/command prompt 
 2. Activate the environment containing the proper packages of opencv2, numpy, and argparse
 3. locate the current working directory 
-4. use command: python rotate.py -i some_image.jpg -a some_angle
+4. use command: `python rotate.py -i some_image.jpg -a some_angle`
 
 # **What the code does?** <br/>
 Essentially we are trying to rotate the images, meanwhile maintaining the correct YOLO format annotation. 
